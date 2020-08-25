@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 
 namespace TelCo.ColorCoder
-{
+{ 
     class CPair
     {
         internal Color majorColor;
