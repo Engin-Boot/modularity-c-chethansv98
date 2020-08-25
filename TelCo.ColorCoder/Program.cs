@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using TelCo.ColorCoder.Utils;
+using TelCo.ColorCoder;
 using static TelCo.ColorCoder.Col;
 
 namespace TelCo.ColorCoder
@@ -11,7 +11,7 @@ namespace TelCo.ColorCoder
         public static void Main(string[] args)
         {
             int pairNumber = 4;
-            ColorPair testPair1 = GetColorFromPairNumber(pairNumber);
+            CPair testPair1 = GetColorFromPairNumber(pairNumber);
             Console.WriteLine("[In]Pair Number: {0},[Out] Col: {1}\n", pairNumber, testPair1);
             Debug.Assert(testPair1.majorColor == Color.White);
             Debug.Assert(testPair1.minorColor == Color.Brown);
@@ -28,12 +28,12 @@ namespace TelCo.ColorCoder
             Debug.Assert(testPair1.majorColor == Color.Violet);
             Debug.Assert(testPair1.minorColor == Color.Green);
 
-            ColorPair testPair2 = new ColorPair() { majorColor = Color.Yellow, minorColor = Color.Green };
+            CPair testPair2 = new CPair() { majorColor = Color.Yellow, minorColor = Color.Green };
             pairNumber = GetPairNumberFromColor(testPair2);
             Console.WriteLine("[In]Col: {0}, [Out] PairNumber: {1}\n", testPair2, pairNumber);
             Debug.Assert(pairNumber == 18);
 
-            testPair2 = new ColorPair() { majorColor = Color.Red, minorColor = Color.Blue };
+            testPair2 = new CPair() { majorColor = Color.Red, minorColor = Color.Blue };
             pairNumber = GetPairNumberFromColor(testPair2);
             Console.WriteLine("[In]Col: {0}, [Out] PairNumber: {1}", testPair2, pairNumber);
             Debug.Assert(pairNumber == 6);
