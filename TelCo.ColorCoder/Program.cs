@@ -13,7 +13,7 @@ namespace TelCo.ColorCoder
             int pairNumber = 4;
             CPair testPair1 = GetColorFromPairNumber(pairNumber);
             Console.WriteLine("[In]Pair Number: {0},[Out] Col: {1}\n", pairNumber, testPair1);
-            Debug.Assert(testPair1.majorColor == Color.White);
+            Debug.Assert(testPair1.majorColor == Color.White);  
             Debug.Assert(testPair1.minorColor == Color.Brown);
 
             pairNumber = 5;
