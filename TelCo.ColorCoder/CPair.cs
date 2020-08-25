@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TelCo.ColorCoder.Utils
+namespace TelCo.ColorCoder
 {
     class CPair
     {
