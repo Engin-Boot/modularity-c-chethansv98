@@ -7,7 +7,7 @@ using static TelCo.ColorCoder.Colors;
 namespace TelCo.ColorCoder
 {
     class Program
-    {
+    { 
         public static void Main(string[] args)
         {
             int pairNumber = 4;
