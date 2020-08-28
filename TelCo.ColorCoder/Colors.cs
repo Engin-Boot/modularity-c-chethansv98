@@ -13,7 +13,7 @@ namespace TelCo.ColorCoder
             int minorIndex = (pairNumber - 1) % ColorConstant.colorMapMinor.Length;
 
             Pair pair = new Pair() 
-            {
+            { 
                 majorColor = ColorConstant.colorMapMajor[majorIndex],
                 minorColor = ColorConstant.colorMapMinor[minorIndex]
             };
