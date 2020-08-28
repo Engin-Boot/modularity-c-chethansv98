@@ -2,7 +2,7 @@
 
 namespace TelCo.ColorCoder
 { 
-    class CPair
+    class Pair
     {
         internal Color majorColor;
         internal Color minorColor;
