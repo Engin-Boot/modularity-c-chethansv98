@@ -3,7 +3,7 @@ using TelCo.ColorCoder;
 
 namespace TelCo.ColorCoder
 {
-   class Col
+   class Color
     {
         public static CPair GetColorFromPairNumber(int pairNumber)
         {
