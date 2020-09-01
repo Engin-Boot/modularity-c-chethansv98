@@ -22,22 +22,32 @@ namespace TelCo.ColorCoder
         public static int GetPairNumberFromColor(Pair pair)
         {
             int majorIndex = -1, minorIndex = -1;
-            for (int i = 0; i < ColorConstant.colorMapMajor.Length; i++)
+            
+            
+            if (GetMajorIndex(pair,majorIndex) == -1 || GetMinorIndex(pair,minorIndex) == -1)
+                throw new ArgumentException(string.Format("Unknown Colors: {0}", pair.ToString()));
+            return (majorIndex * ColorConstant.colorMapMinor.Length) + (minorIndex + 1);
+        }
+        public static int GetMajorIndex(Pair pair, int majorIndex){
+            for (int i = 0; i < ColorConstant.colorMapMajor.Length; i++){
                 if (ColorConstant.colorMapMajor[i] == pair.majorColor)
                 {
                     majorIndex = i;
                     break;
                 }
-            for (int i = 0; i < ColorConstant.colorMapMinor.Length; i++)
+            }return majorIndex;
+        }
+        public static int GetMinorIndex(Pair pair, int minorIndex){
+            for (int i = 0; i < ColorConstant.colorMapMinor.Length; i++){
                 if (ColorConstant.colorMapMinor[i] == pair.minorColor)
                 {
                     minorIndex = i;
                     break;
                 }
-            if (majorIndex == -1 || minorIndex == -1)
-                throw new ArgumentException(string.Format("Unknown Colors: {0}", pair.ToString()));
-            return (majorIndex * ColorConstant.colorMapMinor.Length) + (minorIndex + 1);
+            }
+            return minorIndex;
         }
+
         public override string ToString() 
         {
             string colorCode = "";
